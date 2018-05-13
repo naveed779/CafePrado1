@@ -1,0 +1,97 @@
+﻿    <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Style/Layout.css" rel="stylesheet" />
+   
+</head>
+<body>
+
+    
+    @*<div class="container body-content">*@
+   @* <div id="sidebar">
+        <div class="toggle-btn" onclick="toggleSideBar()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li>@Html.ActionLink("Home","Index","Home")</li>
+            <li>Take Order</li>
+            <li>Customer Payment</li>
+            <li>Vender Order</li>
+            <li>Vender Payment</li>
+            <li>Hire Employee</li>
+            <li>Employee Salary</li>
+            <li>Add New Items</li>
+
+        </ul>
+
+    </div>*@
+    <div class="wrapper">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Cafe Prado Hotel Managment System", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>Cafe Prado Hotel Managemnet System</li>
+                        @*<li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        <li>@Html.ActionLink("Sign IN", "SignIN","Home")</li>
+                        <li>@Html.ActionLink("Sign UP", "SignUP", "Home")</li>*@
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <input type="checkbox" id="navigation" />
+        <label for="navigation">
+            +
+        </label>
+
+        <nav>
+            <ul>
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("Take Order","TakeOrder","Home")</li>
+                <li>@Html.ActionLink("Customer Payment", "CustomerPayment", "Home")</li>
+                <li>@Html.ActionLink("Vender Order", "VenderOrder", "Home")</li>
+                <li>@Html.ActionLink("Vender Payment", "VenderPayment", "Home")</li>
+                <li>@Html.ActionLink("Hire Employee", "HireEmployee", "Home")</li>
+                <li>@Html.ActionLink("Employee Salary", "EmployeeSalary", "Home")</li>
+                <li>@Html.ActionLink("Add New Items", ">AddNewItems", "Home")</li>
+                
+
+            </ul>
+        </nav>
+        
+        <section>
+            <article>
+                @RenderBody()
+                <footer>
+                    <h3>&copy; @DateTime.Now.Year - Cafe Prado Hotel Managment System</h3>
+                </footer>
+            </article>
+        </section>
+    </div>
+    
+       
+        <hr />
+       
+    
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
