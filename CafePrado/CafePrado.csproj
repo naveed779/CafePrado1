@@ -165,6 +165,7 @@
     <Content Include="Graphics\avatar.png" />
     <Content Include="Graphics\back.jpg" />
     <Content Include="Graphics\icon-full-register.png" />
+    <Content Include="Graphics\light-blue-abstract-lines-backgrounds-wallpapers.jpg" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />

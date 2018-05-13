@@ -1,15 +1,15 @@
 ﻿body{
     margin: 0;
     padding: 0;
-    background-image:url(~/Graphics/back.jpg);
-    background-size: cover;
+    background-color:#90bbf6;
+        background-size: cover;
     background-position: center;
     font-family: sans-serif;
     align-content:center
 }
 
 #interface{
-     width: 400px;
+    width: auto;
     height: auto;
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
@@ -17,6 +17,12 @@
     left: 50%;
     box-sizing: border-box;
     padding: 70px 30px;
+    margin: auto;
+    width: 60%;
+    position:center;
+  
+    
+
 }
 h1 {
     margin: 10;
@@ -61,6 +67,9 @@ h3 {
         color: #fff;
         font-size: 18px;
         border-radius: 20px;
+        margin: auto;
+        
+  
     }
 #interface input[type="submit"]:hover
 {

@@ -7,34 +7,55 @@
     <head>
         <link href="~/Style/Transections.css" rel="stylesheet" />
     </head>
-<div id="interface">
-    <img src="~/Graphics/avatar.png" class="avatar">
-        <h1>TakeOrder</h1>
+           <div id="interface">
+    <table cellpadding="20">
+        <tr>
+            <td>
+                Customer ID:
+                <input type="text" name="CustomerID" maxlength="5" />
+            </td>
+            <td>
+                <h5>Accountant ID:</h5>
+                <div id="combo">
+                    <input type="text" name="AccountantID" list="List">
+                    <datalist id="List">
+                        <option value="asdadsad"></option>
+                    </datalist>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h5>Name:</h5>
+                <input type="text" name="CustomerName">
+            </td>
+            <td>
+                <h5>Name:</h5>
+                <input type="text" name="AccountantName" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h5>Cell No:</h5>
+                <input type="text" name="CustomerCellNo">
+            </td>
+            <td>
+                <h5>Cell NO:</h5>
+                <input type="text" name="AccountantCellNo" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h5>Status:</h5><div id="combo">
+                    <input type="text" name="CustomerID" list="List">
+                    <datalist id="List">
+                        <option value="Pending"></option>
+                        <option value="Done"></option>
+                    </datalist>
+                </div>
+            </td>
+        </tr>
         
-    
-    Customer ID:
-    <input type="text" name="CustomerID" />
-
-    @*Accountant ID:<div id="combo">
-        <input type="text" name="AccountantID" list="List">
-        <datalist id="List">
-            <option value="asdadsad"></option>
-        </datalist>
-    </div>*@
-    <p>Name:</p>
-    <input type="text">
-    <p>Cell No:</p>
-    <input type="text">
-    Status:<div id="combo">
-        <input type="text" name="CustomerID" list="List">
-        <datalist id="List">
-            <option value="Pending"></option>
-            <option value="Done"></option>
-        </datalist>
-    </div>
-    <input type="submit" name="submit" value="SUBMIT">
+    </table>
+               <input type="submit" name="submit" value="SUBMIT">
 </div>
-
-
-
-
