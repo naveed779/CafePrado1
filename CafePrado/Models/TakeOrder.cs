@@ -9,7 +9,6 @@ namespace CafePrado.Models
     public class TakeOrder
 
     {
-        public List<SelectListItem> Orders{ get; set; }
 
         public int CustomerID{ get; set; }
         public string Name{ get; set; }

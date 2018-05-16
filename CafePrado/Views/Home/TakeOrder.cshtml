@@ -1,27 +1,33 @@
-﻿@model CafePrado.Models.TakeOrder;
+﻿@model CafePrado.Models.TakeOrder
+@using (Html.BeginForm()){
 
-<head>
-    <link href="~/Style/Transections.css" rel="stylesheet" />
-    <style>
-       #interface{
-           width:300px;
-       }
-       #full{
-           height:auto;
-           width:auto;
-           background-color:#ff0000;
-       }
-        #button {
-            border: none;
+            <head>
+            
+                <link href="~/Style/Transections.css" rel="stylesheet" />
+            
+                <style>
+#interface {
+            width: 300px;
+            }
+
+#full {
+            height: auto;
+            width: auto;
+            background-color: #ff0000;
+        }
+
+#button {
+        border: none;
             outline: none;
             height: 40px;
-            position:center;
+            position: center;
             color: #fff;
             font-size: 18px;
             border-radius: 20px;
             margin: auto;
         }
     </style>
+        
 </head>
 <div id="full">
     <table cellpadding="30">
@@ -54,7 +60,7 @@
                                 <input type="text" name="CustomerCell" />
                             </td>
                         </tr>
-                       
+
                     </table>
 
                 </div>
@@ -89,7 +95,7 @@
                                 <input type="text" name="AccountantCell" />
                             </td>
                         </tr>
-                       
+
                     </table>
 
                 </div>
@@ -143,3 +149,5 @@
 
     </div>
 </div>
+
+}

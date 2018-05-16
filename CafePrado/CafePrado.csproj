@@ -155,8 +155,6 @@
     </Compile>
     <Compile Include="Models\AddAccountant.cs" />
     <Compile Include="Models\AddNewItems.cs" />
-    <Compile Include="Models\Datatabel.cs" />
-    <Compile Include="Models\Main.cs" />
     <Compile Include="Models\PersonModel.cs" />
     <Compile Include="Models\AddCustomer.cs" />
     <Compile Include="Models\TakeOrder.cs" />
@@ -220,6 +218,7 @@
     <Content Include="Views\Home\AddNewItems.cshtml" />
     <Content Include="Views\Home\AddAccountant.cshtml" />
     <Content Include="Views\Home\TakeOrder.cshtml" />
+    <Content Include="Views\Home\AddCustomerGridView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

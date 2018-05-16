@@ -82,16 +82,10 @@ namespace CafePrado.Controllers
 
         public ActionResult CustomerPayment()
         {
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-L4B6SHB;Initial Catalog=Managment;Integrated Security=True");
-            con.Open();
-            DataTable dt = new DataTable();
-            string query1 = "SELECT * from TakeOrder";
-            SqlDataAdapter sda = new SqlDataAdapter(query1, con);
-            sda.Fill(dt);
-            return View(dt);
 
 
 
+            return View();
         }
         public ActionResult VenderOrder()
         {
@@ -159,50 +153,29 @@ namespace CafePrado.Controllers
         }
         public ActionResult TakeOrder()
         {
-            TakeOrder db = new TakeOrder();
-            db.Orders = PopulateOrders();
-            return View(db);
+            return View();
         }
 
-        [HttpPost]
-        public ActionResult TakeOrder(TakeOrder ordermodel)
+        public ActionResult AddCustomerGridView()
         {
-            ordermodel.Orders = PopulateOrders();
-            var selectedItem = ordermodel.Orders.Find(p => p.Value == ordermodel.CustomerID.ToString());
-            if (selectedItem != null)
-            {
-                selectedItem.Selected = true;
-                ViewBag.Message = "CustomerName: " + selectedItem.Text;
-                ViewBag.Message += "CCell: " + ordermodel.CCell;
-            }
-
-            return View("TakeOrder");
-        }
-        private List<SelectListItem> PopulateOrders()
-        {
-            List<SelectListItem> items = new List<SelectListItem>();
-            SqlConnection con = new SqlConnection(connectionString);
-
-            string ord = " SELECT CustomerID, Name , CCell FROM AddCustomer";
-            SqlCommand cmd = new SqlCommand(ord, con);
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-L4B6SHB;Initial Catalog=Managment;Integrated Security=True");
             con.Open();
-            SqlDataReader sdr = cmd.ExecuteReader();
-
-            while (sdr.Read())
-            {
-                items.Add(new SelectListItem
-                {
-                    Text = sdr["CustomerName"].ToString(),
-                    Value = sdr["CustomerCell"].ToString()
-                });
-            }
-
-            con.Close();
-            return items;
+            DataTable dt = new DataTable();
+            string query1 = "SELECT * from AddCustomer";
+            SqlDataAdapter sda = new SqlDataAdapter(query1, con);
+            sda.Fill(dt);
+            return View(dt);
+           
         }
-    }
-}
+       
+        }
+       
+           
+
             
+        }
+    
+       
 
         
     

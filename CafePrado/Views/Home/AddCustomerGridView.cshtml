@@ -1,0 +1,31 @@
+﻿@model System.Data.DataTable
+
+
+
+
+
+@using (Html.BeginForm())
+{
+    <h2>DataGridview</h2>
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th> CustomerID </th>
+            <th> CustomerName </th>
+            <th> CustomerCell </th>
+            <th> CustomerStatus </th>
+            <
+
+        </tr>
+        @for (int i = 0; i < Model.Rows.Count; i++)
+        {
+            <tr>
+                <td>@Model.Rows[i][0]</td>
+                <td>@Model.Rows[i][1]</td>
+                <td>@Model.Rows[i][2]</td>
+                <td>@Model.Rows[i][3]</td>
+
+            </tr>
+        }
+    </table>}
+
+
