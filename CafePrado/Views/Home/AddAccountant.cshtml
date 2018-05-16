@@ -1,4 +1,4 @@
-﻿@model CafePrado.Models.AddNewItems
+﻿@model CafePrado.Models.AddAccountant
 @using (Html.BeginForm())
 {
 
@@ -8,21 +8,27 @@
     </head>
 
     <div id="interface">
-        <h2>ADD NEW ITEMS</h2>
+        <h2>ADD Accountant</h2>
         <form>
             <table cellpadding="20">
                 <tr>
                     <td>
-                        ID:<input type="text" name="itemID" />
+                        ID:<input type="text" name="AccountantID" />
                     </td>
                     <td>
-                        Name:<input type="text" name="itemName" />
+                        Name:<input type="text" name="AName" />
+                    </td>
+                    <td>
+                        Cell:<input type="text" name="AccountantCell" />
                     </td>
 
                 </tr>
                 <tr>
                     <td>
-                        Quantity:<input type="text" name="itemQuantity" />
+                        Salary:<input type="text" name="AccountantSalary" />
+                    </td>
+                    <td>
+                        Email:<input type="text" name="AEmail" />
                     </td>
                 </tr>
             </table>
@@ -33,9 +39,10 @@
                     <input type="submit" name="submit" value="SUBMIT">
                 </td>
                 <td>
-                    <input type="submit" name="submit" value="View Added Items">
+                    <input type="submit" name="submit" value="View All Accountants">
                 </td>
             </tr>
         </table>
     </div>
+
 }

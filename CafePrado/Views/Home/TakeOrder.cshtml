@@ -1,98 +1,145 @@
-﻿@model CafePrado.Models.TakeOrder
- 
+﻿@model CafePrado.Models.TakeOrder;
+
+<head>
+    <link href="~/Style/Transections.css" rel="stylesheet" />
+    <style>
+       #interface{
+           width:300px;
+       }
+       #full{
+           height:auto;
+           width:auto;
+           background-color:#ff0000;
+       }
+        #button {
+            border: none;
+            outline: none;
+            height: 40px;
+            position:center;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 20px;
+            margin: auto;
+        }
+    </style>
+</head>
+<div id="full">
+    <table cellpadding="30">
+        <tr>
+            <td>
+                <div id="interface">
+                    <table>
+                        <tr>
+                            <td>
+                                <h3>Customer Data</h3>
+                                <h5>Customer ID:</h5>
+                                <div id="combo">
+                                    <input type="text" name="CustomerID" list="List">
+                                    <datalist id="List">
+                                        <option value="Pending"></option>
+                                        <option value="Done"></option>
+                                    </datalist>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Name:
+                                <input type="text" name="CustomerName" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Cell No:
+                                <input type="text" name="CustomerCell" />
+                            </td>
+                        </tr>
+                       
+                    </table>
+
+                </div>
 
 
+            </td>
+            <td>
+                <div id="interface">
+                    <table>
+                        <tr>
+                            <td>
+                                <h3>Accountant  Data</h3>
+                                <h5>Accountant ID:</h5>
+                                <div id="combo">
+                                    <input type="text" name="AccountantID" list="List">
+                                    <datalist id="List">
+                                        <option value="Pending"></option>
+                                        <option value="Done"></option>
+                                    </datalist>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Name:
+                                <input type="text" name="AccountantName" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Cell No:
+                                <input type="text" name="AccountantCell" />
+                            </td>
+                        </tr>
+                       
+                    </table>
 
+                </div>
+            </td>
+            <td>
+                <div id="interface">
+                    <table>
+                        <tr>
+                            <td>
+                                <h3>Item Data</h3>
+                                <h5>Item ID:</h5>
+                                <div id="combo">
+                                    <input type="text" name="itemID" list="List">
+                                    <datalist id="List">
+                                        <option value="Pending"></option>
+                                        <option value="Done"></option>
+                                    </datalist>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Item Name:
+                                <input type="text" name="itemName" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Quantity
+                                <input type="text" name="itemQuantity" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
 
-@using (Html.BeginForm())
-{
+        </tr>
 
-    <head>
-        <link href="~/Style/Transections.css" rel="stylesheet" />
-    </head>
-    <div id="interface">
-    <h2>TAKE ORDER  FROM CUSTOMER</h2>
-        <table cellpadding="20">
+    </table>
+    <div id="button">
+        <table>
             <tr>
                 <td>
-                    Customer ID:
-                    <input type="text" name="CustomerID" maxlength="5" />
+                    <input type="submit" name="ordersubmit" value="SUBMIT">
                 </td>
                 <td>
-                    <h5>Accountant ID:</h5>
-                    <div id="combo">
-                        <input type="text" name="AccountantID" list="List">
-                        <datalist id="List">
-                            <option value="asdadsad"></option>
-                        </datalist>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <h5>Name:</h5>
-                    <input type="text" name="Name">
-                </td>
-                <td>
-                    <h5>Name:</h5>
-                    <input type="text" name="AccountantName" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <h5>Cell No:</h5>
-                    <input type="text" name="CellNo">
-                </td>
-                <td>
-                    <h5>Cell NO:</h5>
-                    <input type="text" name="AccountantCellNo" />
-                </td>
-               
-            </tr>
-            <tr>
-                <td>
-                    <h5>Status:</h5><div id="combo">
-                        <input type="text" name="Status" list="List">
-                        <datalist id="List">
-                            <option value="Pending"></option>
-                            <option value="Done"></option>
-                        </datalist>
-                    </div>
-                </td>
-                <td>
-                    <h5>items:</h5><div id="combo">
-                        <input type="text" name="itemsadded" list="List">
-                        <datalist id="List">
-                            <option value="Pending"></option>
-                            <option value="Done"></option>
-                        </datalist>
-                    </div>
-                </td>
-                <td>
-                    <h5>price</h5><input type="text" name="price" />
-                </td>
-                <td>
-                    <h5>Quantity</h5><input type="text"name="quantity" />
+                    <input type="submit" name="GridView" value="VIEW GRID">
                 </td>
 
             </tr>
-
         </table>
-        <table cellpadding="40">
-            <tr>
-                <td>
-                    <input type="submit" name="submit" value="SUBMIT">
 
-
-                </td>
-                <td>
-                    <input type="submit" name="viewGrid" value="VIEW GRIDVIEW">
-                </td>
-                <td>
-                    <input type="submit" name="additem" value="ADD ITEM">
-                </td>
-            </tr>
-        </table>
-
-       
-    </div>}
+    </div>
+</div>

@@ -8,7 +8,7 @@ namespace CafePrado.Models
     public class Main
     {
         
-            public IEnumerable<TakeOrder> TakeOrders { get; set; }
+            public IEnumerable<AddCustomer> TakeOrders { get; set; }
 
 
     }

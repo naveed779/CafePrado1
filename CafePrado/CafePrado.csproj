@@ -153,9 +153,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AddAccountant.cs" />
+    <Compile Include="Models\AddNewItems.cs" />
     <Compile Include="Models\Datatabel.cs" />
     <Compile Include="Models\Main.cs" />
     <Compile Include="Models\PersonModel.cs" />
+    <Compile Include="Models\AddCustomer.cs" />
     <Compile Include="Models\TakeOrder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -208,13 +211,15 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\SignIN.cshtml" />
     <Content Include="Views\Home\SignUP.cshtml" />
-    <Content Include="Views\Home\TakeOrder.cshtml" />
+    <Content Include="Views\Home\AddCustomer.cshtml" />
     <Content Include="Views\Home\CustomerPayment.cshtml" />
     <Content Include="Views\Home\VenderOrder.cshtml" />
     <Content Include="Views\Home\VenderPayment.cshtml" />
     <Content Include="Views\Home\HireEmployee.cshtml" />
     <Content Include="Views\Home\EmployeeSalary.cshtml" />
     <Content Include="Views\Home\AddNewItems.cshtml" />
+    <Content Include="Views\Home\AddAccountant.cshtml" />
+    <Content Include="Views\Home\TakeOrder.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

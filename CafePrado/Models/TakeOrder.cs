@@ -2,15 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace CafePrado.Models
 {
     public class TakeOrder
-    {
 
-        public int CustomerID { get; set; }
-        public string Name { get; set; }
-        public int Cell { get; set; }
-        public string Status { get; set; }
+    {
+        public List<SelectListItem> Orders{ get; set; }
+
+        public int CustomerID{ get; set; }
+        public string Name{ get; set; }
+        public int CCell { get; set; }
     }
 }
